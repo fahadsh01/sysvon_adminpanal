@@ -1,0 +1,41 @@
+import axios from "axios";
+
+const axiosInstance = axios.create({
+  baseURL: "https://serene-sprite-52a20b.netlify.app/api/v1",
+  withCredentials: true,
+});
+
+axiosInstance.interceptors.response.use(
+  (res) => res,
+  async (err) => {
+    const originalRequest = err.config;
+
+    // Skip redirect if it's the logout endpoint
+    const isLogoutRequest = originalRequest.url?.includes("/users/logout");
+
+    if (
+      err.response?.status === 401 &&
+      !originalRequest._retry &&
+      !isLogoutRequest // don't retry or redirect on logout failure
+    ) {
+      originalRequest._retry = true;
+
+      try {
+        await axios.post(
+          "/users/refreshAccessToken",
+          {},
+          { withCredentials: true }
+        );
+
+        return axiosInstance(originalRequest);
+      } catch (refreshErr) {
+        window.location.href = "/login";
+        return Promise.reject(refreshErr);
+      }
+    }
+
+    return Promise.reject(err);
+  }
+);
+
+export default axiosInstance;
