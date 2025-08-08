@@ -1,7 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
-const navigate = useNavigate();
 
 const axiosInstance = axios.create({
   baseURL: "https://sysvonbackend-production.up.railway.app/api/v1",
@@ -32,7 +29,7 @@ axiosInstance.interceptors.response.use(
 
         return axiosInstance(originalRequest);
       } catch (refreshErr) {
-        navigate("/login");
+        window.location.href = "/login";
         return Promise.reject(refreshErr);
       }
     }
