@@ -16,7 +16,7 @@ export default function Logout() {
 
       try {
         await axios.post(
-          "http://localhost:5000/api/v1/users/logout",
+          "https://sysvonadminpanal.netlify.app/api/v1/users/logout",
           {},
           { withCredentials: true }
         );
