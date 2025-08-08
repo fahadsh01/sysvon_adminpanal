@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://serene-sprite-52a20b.netlify.app/api/v1",
+  baseURL: "https://sysvonbackend-production.up.railway.app/api/v1",
   withCredentials: true,
 });
 
@@ -22,7 +22,7 @@ axiosInstance.interceptors.response.use(
 
       try {
         await axios.post(
-          "/users/refreshAccessToken",
+          "https://sysvonbackend-production.up.railway.app/api/v1/users/refreshAccessToken",
           {},
           { withCredentials: true }
         );
