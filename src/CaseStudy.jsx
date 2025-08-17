@@ -46,7 +46,7 @@ export default function CasePage() {
 
       {loading ? (
         <p>Loading Requested CaseStudies ...</p>
-      ) : caseStudy.length === 0 ? (
+      ) : caseStud.length === 0 ? (
         <p>No Requested CaseStudies found.</p>
       ) : (
         <div className="overflow-x-auto">
