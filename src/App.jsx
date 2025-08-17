@@ -9,6 +9,7 @@ import ContactsPage from "./ContactsPage";
 import LoginPage from "./LoginPage";
 import ManageBlogs from "./ManageBlogs";
 import Logout from "./Logout";
+import Case from "./CaseStudy";
 export default function App() {
   return (
     <Router>
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/create-blog" element={<BlogCreate />} />
           <Route path="/logout" element={<Logout />} />
-
+          <Route path="/case-studies" element={<Case />} />
           <Route path="/" element={<ManageBlogs />} />
         </Routes>
       </div>

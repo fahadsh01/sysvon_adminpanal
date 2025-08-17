@@ -8,8 +8,6 @@ const ManageBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [success, setSuccess] = useState(false);
-
-  // Fetch Blogs
   useEffect(() => {
     const fetchBlogs = async () => {
       try {

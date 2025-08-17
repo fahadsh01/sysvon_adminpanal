@@ -14,6 +14,9 @@ export default function Navbar() {
         <Link to="/create-blog" className="hover:text-gray-300">
           Create Blog
         </Link>
+        <Link to="/case-studies" className="hover:text-gray-300">
+          Req for caseStudy
+        </Link>
         <Link to="/subscribers" className="hover:text-gray-300">
           Subscribers
         </Link>
@@ -21,6 +24,7 @@ export default function Navbar() {
         <Link to="/contacts" className="hover:text-gray-300">
           Contacts
         </Link>
+
         <Link
           to="/logout"
           className="bg-green-500 px-4 py-1 rounded hover:bg-green-600"
