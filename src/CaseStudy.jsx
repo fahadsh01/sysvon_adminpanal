@@ -53,13 +53,13 @@ export default function CasePage() {
           <table className="min-w-full border border-gray-300">
             <thead className="bg-gray-100">
               <tr>
-                <th className="border p-2">Full Name</th>
+                <th className="border p-2">First Name</th>
+                <th className="border p-2">Last Name</th>
                 <th className="border p-2">Email</th>
-                <th className="border p-2">Role</th>
+                <th className="border p-2">Job Title</th>
                 <th className="border p-2">Company</th>
-                <th className="border p-2">City</th>
-                <th className="border p-2">Message</th>
-                <th className="border p-2">Phone Number</th>
+                <th className="border p-2">Slug</th>
+
                 <th className="border p-2">Action</th>
               </tr>
             </thead>
