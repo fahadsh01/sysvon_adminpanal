@@ -42,12 +42,12 @@ export default function CasePage() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Contacts</h1>
+      <h1 className="text-2xl font-bold mb-4">Requested CaseStudies</h1>
 
       {loading ? (
-        <p>Loading contacts...</p>
-      ) : contacts.length === 0 ? (
-        <p>No contacts found.</p>
+        <p>Loading Requested CaseStudies ...</p>
+      ) : caseStudy.length === 0 ? (
+        <p>No Requested CaseStudies found.</p>
       ) : (
         <div className="overflow-x-auto">
           <table className="min-w-full border border-gray-300">
