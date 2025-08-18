@@ -1,4 +1,3 @@
-// ContactsPage.jsx
 import React, { useEffect, useState } from "react";
 import axiosInstance from "./axiosinstance";
 import { FaTrash } from "react-icons/fa";
@@ -34,7 +33,7 @@ export default function CasePage() {
       await axiosInstance.delete(`/Case/delete-case/${id}`, {
         withCredentials: true,
       }); // Change endpoint as needed
-      setCaseStudy(caseStudy.filter((contact) => contact._id !== id));
+      setCaseStudy(caseStudy.filter((caseStudy) => caseStudy._id !== id));
     } catch (error) {
       console.error("Error deleting contact:", error);
     }
