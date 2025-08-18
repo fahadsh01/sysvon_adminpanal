@@ -17,7 +17,7 @@ export default function CasePage() {
         withCredentials: true,
       });
       setCaseStudy(res.data.data);
-      console.log(caseStudy);
+      console.log(res.data.data);
     } catch (error) {
       console.error("Error fetching casestudy request:", error);
     } finally {
